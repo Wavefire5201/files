@@ -388,6 +388,45 @@
     </include>
 
     <include>
+      <name>green_buoy</name>
+      <pose>-525 180 0 1.5 0 -2.67</pose>
+      <uri>models/green_buoy</uri>
+
+      <plugin name="vrx::PolyhedraBuoyancyDrag"
+              filename="libPolyhedraBuoyancyDrag.so">
+        <fluid_density>1000</fluid_density>
+        <fluid_level>0.0</fluid_level>
+        <linear_drag>25.0</linear_drag>
+        <angular_drag>2.0</angular_drag>
+        <buoyancy name="collision_outer">
+          <link_name>link</link_name>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+        </buoyancy>
+        <wavefield> 
+          <size>1000 1000</size>
+          <cell_count>50 50></cell_count>
+          <wave>
+            <model>PMS</model>
+            <period>5.0</period>
+            <number>3</number>
+            <scale>1.1</scale>
+            <gain>0.3</gain>
+            <direction>1 0</direction>
+            <angle>0.4</angle>
+            <tau>2.0</tau>
+            <amplitude>0.0</amplitude>
+            <steepness>0.0</steepness>
+          </wave>
+        </wavefield>
+      </plugin>
+    </include>
+
+    <include>
       <name>red_buoy</name>
       <pose>-530 180 0 1.5 0 -2.67</pose>
       <uri>models/red_buoy</uri>
@@ -428,7 +467,7 @@
 
     <include>
       <name>blue_ball</name>
-      <pose>-540 180 0 1.57 0 -1.7</pose>
+      <pose>-535 180 0 1.57 0 -1.7</pose>
       <uri>models/blue_ball</uri>
 
       <plugin name="vrx::PolyhedraBuoyancyDrag"
@@ -468,7 +507,7 @@
 
     <include>
       <name>green_ball</name>
-      <pose>-545 180 0 1.57 0 -1.7</pose>
+      <pose>-540 180 0 1.57 0 -1.7</pose>
       <uri>models/green_ball</uri>
 
       <plugin name="vrx::PolyhedraBuoyancyDrag"
@@ -504,6 +543,87 @@
         </wavefield>
       </plugin>
     </include>
+
+
+    <include>
+      <name>yellow_ball</name>
+      <pose>-545 180 0 1.57 0 -1.7</pose>
+      <uri>models/yellow_ball</uri>
+
+      <plugin name="vrx::PolyhedraBuoyancyDrag"
+              filename="libPolyhedraBuoyancyDrag.so">
+        <fluid_density>1000</fluid_density>
+        <fluid_level>0.0</fluid_level>
+        <linear_drag>25.0</linear_drag>
+        <angular_drag>2.0</angular_drag>
+        <buoyancy name="collision_outer">
+          <link_name>link</link_name>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+        </buoyancy>
+        <wavefield>
+          <size>1000 1000</size>
+          <cell_count>50 50></cell_count>
+          <wave>
+            <model>PMS</model>
+            <period>5.0</period>
+            <number>3</number>
+            <scale>1.1</scale>
+            <gain>0.3</gain>
+            <direction>1 0</direction>
+            <angle>0.4</angle>
+            <tau>2.0</tau>
+            <amplitude>0.0</amplitude>
+            <steepness>0.0</steepness>
+          </wave>
+        </wavefield>
+      </plugin>
+    </include>
+
+    <include>
+      <name>red_ball</name>
+      <pose>-550 180 0 1.57 0 -1.7</pose>
+      <uri>models/red_ball</uri>
+
+      <plugin name="vrx::PolyhedraBuoyancyDrag"
+              filename="libPolyhedraBuoyancyDrag.so">
+        <fluid_density>1000</fluid_density>
+        <fluid_level>0.0</fluid_level>
+        <linear_drag>25.0</linear_drag>
+        <angular_drag>2.0</angular_drag>
+        <buoyancy name="collision_outer">
+          <link_name>link</link_name>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <sphere>
+              <radius>0.25</radius>
+            </sphere>
+          </geometry>
+        </buoyancy>
+        <wavefield>
+          <size>1000 1000</size>
+          <cell_count>50 50></cell_count>
+          <wave>
+            <model>PMS</model>
+            <period>5.0</period>
+            <number>3</number>
+            <scale>1.1</scale>
+            <gain>0.3</gain>
+            <direction>1 0</direction>
+            <angle>0.4</angle>
+            <tau>2.0</tau>
+            <amplitude>0.0</amplitude>
+            <steepness>0.0</steepness>
+          </wave>
+        </wavefield>
+      </plugin>
+    </include>
+
+
 
     <!-- Custom stuff end -->
 
